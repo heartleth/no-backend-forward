@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>no backend forwarding</title>
         <script>const copy=()=>{const copyText = document.getElementById("out");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");};</script>
-        <script>const gen=()=>{document.querySelector('#out').value=`${location.origin}/a.html#${[...document.querySelector('#in').value].map(e=>(e.charCodeAt(0))).join('b')}`};</script>
+        <script>const gen=()=>{document.querySelector('#out').value=`${location.origin}/no-backend-forward/a.html#${[...document.querySelector('#in').value].map(e=>(e.charCodeAt(0))).join('b')}`};</script>
         <style>
         body{display:flex;justify-content:center;}
         div{position: absolute;top: 40%;}
