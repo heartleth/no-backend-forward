@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>no backend forwarding</title>
+        <script>const copy=()=>{const copyText = document.getElementById("out");copyText.select();copyText.setSelectionRange(0, 99999);document.execCommand("copy");};</script>
+        <script>const gen=()=>{document.querySelector('#out').value=`${location.origin}/a.html#${[...document.querySelector('#in').value].map(e=>(e.charCodeAt(0))).join('b')}`};</script>
+        <style>
+        body{display:flex;justify-content:center;}
+        div{position: absolute;top: 40%;}
+        div tr>*>*{border-radius: 8px;width: 500px;}
+        div input{max-width:500px;height: 45px;font-size: 20px;border-radius: 8px;}
+        div button{width:90px;height: 50px;font-size: 20px;border-radius: 8px;}
+        div button:hover{background-color: rgb(255, 255, 255);}
+        </style>
+    </head>
+    <body>
+        <div><table><tr>
+            <td><input type="text" value="" id="in"></td>
+            <td><button onclick="gen()">Convert</button></td>
+        </tr><tr>
+            <td><input type="text" value="" id="out" readonly></td>
+            <td><button onclick="copy()">Copy url</button></td>
+        </tr></table></div>
+    </body>
+</html>
